@@ -12,7 +12,6 @@
 	In REST Architecture everything is Resource. 
 	
 	These web services use HTTP methods to implement the concept of REST architecture.
-	this shridhara  NK
 	A RESTful web service usually defines a URI, Uniform Resource Identifier a service, provides resource representation such as JSON and set of HTTP Methods.
 	
 4.	What is a Resource in REST.
@@ -26,4 +25,3 @@
 					However, there are many other verbs available including things like POST, PUT, and DELETE. So in the case of the example http://demo.guru99.com/employee/1 , 
 					the web browser is actually issuing a GET Verb because it wants to get the details of the employee record.
 	Request Headers – These are additional instructions sent with the request. These might define the type of response required or the authorization details.
-	Added extra lines at the bottom of the page.
