@@ -1,27 +1,104 @@
-1.	What is REST.
-	REST is web standards based architecture. and uses HTTP Protocol for data communication. It revolves around resource where every component is a resource 
-	and a resource is accessed by a common interface using HTTP standard methods
+Commands used in Git.
 
-2.	What is Web Services.
-	A web service is a collection of open protocols and standards used for exchanging data between applications or systems.
-	Software applications written in various programming languages and running on various platforms can use web services to exchange data over computer networks 
-	like the Internet in a manner similar to inter-process communication on a single computer.
+1.	git status
+	This command lists all the files that have to be committed.
 
-3.	What is RESTful Web Services.
-	REST is used to build Web services that are lightweight, maintainable, and scalable in nature. A service which is built on the REST architecture is called a RESTful service.
-	In REST Architecture everything is Resource. 
+2. 	git diff
+	This command shows the file differences which are not yet staged.
+		git diff
+	Command shows the difference between the files in the stagin area and latest version present
+		git diff -staged
+
+3.	git log
+	show the list of commits in one line format.
+		git log --oneline
+	This command lists version history for a file, including the renaming of files also.
+		git log –follow[file]
+
+4.	git config 
+	This command sets the author name and email address respectively to be used with your commits.
+		git config --global user.name <name>
+		git config --global user.email <email>
 	
-	These web services use HTTP methods to implement the concept of REST architecture.
-	A RESTful web service usually defines a URI, Uniform Resource Identifier a service, provides resource representation such as JSON and set of HTTP Methods.
+5	git init
+	This command is used to start new repository .
+		git init <repository name>
 	
-4.	What is a Resource in REST.
-	REST architecture treats every content as a resource. These resources can be text files, html pages, images, videos or dynamic business data.
+6. 	git clone
+	This commands is used to obtain a repository from an existing URL
+		git clone https://github.com/Shridharank/testRepo.git
 	
-5.	The key elements of a RESTful implementation.
-	Resources – The first key element is the resource itself. Let assume that a web application on a server has records of several employees. 
-				Let's assume the URL of the web application is http://demo.guru99.com. Now in order to access an employee record resource via REST, 
-				one can issue the command http://demo.guru99.com/employee/1 - This command tells the web server to please provide the details of the employee whose employee number is 1.
-	Request Verbs - These describe what you want to do with the resource. A browser issues a GET verb to instruct the endpoint it wants to get data. 
-					However, there are many other verbs available including things like POST, PUT, and DELETE. So in the case of the example http://demo.guru99.com/employee/1 , 
-					the web browser is actually issuing a GET Verb because it wants to get the details of the employee record.
-	Request Headers – These are additional instructions sent with the request. These might define the type of response required or the authorization details.
+7.	git add
+	This command is used add a file to staging area.
+		git add <filename>
+	Command is used to add one or more files
+		git add * 
+	
+8.	git commit
+	This command records or snapshot the file permanently in the version history
+		git commit -m <commit message>
+	Command commits any file you have added with git add command and also commits any files you changed since than
+		git commit -add
+	This command shows the differences between the two branches mentioned.
+		git diff <first branch> <second branch>
+9.	git reset
+	This command unstages the file, but it preserves the file contents
+		git reset <file>
+	This command  undoes all the commits after specified commits and preserve the changes locally
+		git reset <commit revision number>
+	This command discards all history and goes back to the specified commit.
+		git reset --had <commit revision number>
+		
+10.	git rm
+	This command deletes the file from your working directory and stages the deletion
+		git rm <file>
+		
+11.	git show
+	This command shows the metadata and content changes of the specified commit.
+	git show <commit revision number>
+	
+12.	git tag
+	This command is used to give tags to the specified commit.
+		git tag <commit revision number>
+		
+13. git branch
+	This command lists all the local branches in the current repository.
+		git branch
+	This command creates a new branch.
+		git branch  <branch-name>
+	This command deletes the feature branch.
+		git branch -d <branch-name>
+		
+14.	git checkout
+	This command is used to switch from one branch to another.
+		git checkout <branch-name>
+	This command creates a new branch and also switches to it.
+		git checkout -b <branch-name>
+		
+15.	git merge
+	This command is used to connect your local repository to the remote server.
+		git remote add [variable name] [Remote Server Link]
+		
+16.	git push
+	This command sends the committed changes of master branch to your remote repository.
+		git push <orgin> master
+	This command pushes all branches to your remote repository.
+		git push -all <master>
+	This command deletes a branch on your remote repository.
+		git push [variable name] :[branch name]
+	
+17.	git pull
+	This command fetches and merges changes on the remote server to your working directory.
+		git pull <repository-link>
+		
+18.	git stash
+	This command temporarily stores all the modified tracked files.
+		git stash save
+	This command restores the most recently stashed files.
+		git stash pop 
+		
+19.	git rm
+	Rename the file, specifying the old file name and the new name you'd like to give the file.
+		git rm <old-file-name> <new-file-name>
+	Use "git status" command to check the old and new file names.
+	Commit the file that you've staged in your local repository using "git commit -m "Rename file" and push it to master.
